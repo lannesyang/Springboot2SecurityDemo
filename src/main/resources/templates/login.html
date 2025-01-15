@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8" />
+<link href="css/main.css" rel="stylesheet"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<title></title>
+</head>
+<body>
+	<div class="headArea">
+		<div class="headMenu">
+			<ul>
+			</ul>
+		</div>
+	</div>
+	<div class="bodyArea">
+	<div id="main">
+		<form class="form-signin" method="post" action="/login">
+			<br><br><br><br><br><br>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4">
+				<input name="username" type="text" class="form-control" placeholder="email" />
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4">
+				<input name="password" type="password" class="form-control" placeholder="password" />
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4">
+				<button class="btn btn-lg btn-secondary btn-block" type="submit"><p><span th:text="login"></span></p></button>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4">
+				<h4><a th:href="@{/register}" th:text="register"></a>&nbsp;/&nbsp;<a th:href="@{/forgetPassword}" th:text="forgetPassword"></a></h4>
+			</div>
+		</div>
+	</form>
+	</div>
+	</div>
+	<div class="footArea"></div>
+</body>
+</html>
